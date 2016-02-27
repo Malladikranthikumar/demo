@@ -1,0 +1,20 @@
+<h1>Listing Sites</h1>
+<table id="sites">
+<tr>
+   <th>Name</th>
+   <th>User_id</th>
+   <th></th>
+   <th></th>
+   <th></th>	
+</tr>
+
+<% @sites.each do |site|%>
+	<%= render site%>
+	<% end %>
+</table>
+
+<br/>
+<h2 > Entry Form </h2>
+<div id = "form" >
+<%= render "form"%>
+</div>

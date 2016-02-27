@@ -1,0 +1,20 @@
+<% unless @keywords.nil? %>
+  <table class="mrgn_lft_6">
+    <tr>
+      <th>ID</th>
+      <th>keyword name</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    
+    <% @keywords.each do |keyword| %>
+      <tr>
+        <td> <%= keyword.id %></td>
+        <td><%= keyword.keyword%></td>
+        <td> <%= link_to 'EDIT', edit_keyword_path(keyword), remote: true %></td>
+        <td> <%#= link_to 'DESTROY', destroy_keyword_path(keyword),remote: 'true', method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
